@@ -2,6 +2,8 @@ package edu.lwtech.csd297.helloworld;
 
 import java.io.*;
 import java.util.*;
+import java.util.logging.Logger;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -74,6 +76,7 @@ public class HelloWorldServlet extends HttpServlet {
             out.println(htmlPage);
         } catch (IOException e) {
             logger.error("Unexpected IO Error sending response.", e);
+            logger.info("THis is only for testing!");
         }
 
         long time = System.currentTimeMillis() - startTime;
